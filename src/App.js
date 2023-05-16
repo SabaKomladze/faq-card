@@ -8,11 +8,10 @@ function App() {
   const [quests] = useState(question);
   return (
     <div className="app">
+      <img src={mobile} alt="" className="mobile" />
+      <img src={desktop} alt="" className="desktop" />
       <article>
-        <img src={mobile} alt="" className="mobile"/>
-      </article>
-      <article>
-        <h1>FAQ</h1>
+        <h1 className="text">FAQ</h1>
         {quests.map((quest, index) => (
           <SingleQuestion
             key={index}
