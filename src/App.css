@@ -1,0 +1,12 @@
+.app{
+  background-color: #fff;
+  border-radius: 23px;
+  width: 87.2%;
+  margin: 0 auto;
+}
+.mobile{
+  width: 63.2%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
