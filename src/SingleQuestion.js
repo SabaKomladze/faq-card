@@ -7,9 +7,9 @@ export default function SingleQuestion({ question, answer }) {
       <article className="head">
         <h2 className={isVisible ? "headeractive" : "header"}>{question}</h2>
         {isVisible ? (
-          <img src={downArrow} className="rotate" />
+          <img src={downArrow} className="rotate" alt="arrowdown" />
         ) : (
-          <img src={downArrow} />
+          <img src={downArrow} alt="arrowup" />
         )}
       </article>
       {isVisible ? <p className="answer transitionelement">{answer}</p> : null}
