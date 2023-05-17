@@ -1,19 +1,19 @@
-*,
-*::after,
-*::before {
-  transition: all 0.5s ease-in;
-}
 .app {
   background-color: #fff;
   border-radius: 23px;
   width: 327px;
   margin: 0 auto;
   padding: 1.25rem 1.25rem 3rem;
+  position: relative;
 }
 .box {
   display: none;
 }
-.desktop {
+.images {
+  position: relative;
+}
+.desktop,
+.desk-pattern {
   display: none;
 }
 .mobile {
@@ -23,6 +23,11 @@
   display: block;
   transform: translateY(-70%);
 }
+.mob-pattern {
+  position: absolute;
+  left: 2.5rem;
+  top: -1.4rem;
+}
 .text {
   text-align: center;
   font-size: 32px;
@@ -30,7 +35,7 @@
   color: #1e1f36;
   font-size: 32px;
   line-height: 40px;
-  margin-top: -90px;
+  margin-top: -55px;
 }
 .rotate {
   rotate: 180deg;
@@ -67,38 +72,55 @@ hr {
 .article {
   cursor: pointer;
 }
-.transitionelement {
-  transition: all 3s ease;
-}
-@media (min-width: 768px) {
+
+@media (min-width: 1440px) {
   .app {
     display: flex;
     width: 920px;
-    padding: 65px 0 83px;
+    padding: 0px 111px 0px 0;
+    justify-content: flex-end;
+  }
+  .mob-pattern {
+    display: none;
+  }
+  .desk-pattern {
+    position: absolute;
+    display: block;
+    top: -200px;
+    left: -545px;
+    width: 964px;
+    height: 944px;
   }
   .mobile {
     display: none;
   }
   .desktop {
     display: block;
-    position: relative;
-    left: -40px;
+    position: absolute;
+    left: -50px;
     width: 471px;
+    top: 55px;
+    z-index: 1;
   }
   .text {
-    margin-top: 0;
+    margin-top: 65px;
     text-align: left;
   }
   .article {
     width: 350px;
   }
-  .images {
-    position: relative;
-  }
+
   .box {
     display: block;
     position: absolute;
-    left: -90px;
-    top: 150px;
+    left: -105px;
+    z-index: 1;
+    top: 200px;
+  }
+  .layer {
+    width: 920px;
+    height: 539px;
+    overflow: hidden;
+    position: relative;
   }
 }
