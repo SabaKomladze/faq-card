@@ -11,14 +11,16 @@ function App() {
   const [quests] = useState(question);
   return (
     <div className="app">
-      <div className="images">
+      <div className="layer">
         <img src={deskpattern} alt="" className="desk-pattern" />
         <img src={mobpattern} alt="" className="mob-pattern" />
-        <img src={mobile} alt="" className="mobile" />
-        <img src={desktop} alt="" className="desktop" />
-        <img src={box} alt="" className="box" />
       </div>
-      <article>
+
+      <img src={mobile} alt="" className="mobile" />
+      <img src={desktop} alt="" className="desktop" />
+      <img src={box} alt="" className="box" />
+
+      <article className="faq">
         <h1 className="text">FAQ</h1>
         {quests.map((quest, index) => (
           <SingleQuestion
