@@ -12,7 +12,7 @@ export default function SingleQuestion({ question, answer }) {
           <img src={downArrow} />
         )}
       </article>
-      {isVisible ? <p className="answer">{answer}</p> : null}
+      {isVisible ? <p className="answer transitionelement">{answer}</p> : null}
       <hr></hr>
     </div>
   );

@@ -5,7 +5,14 @@
   margin: 0 auto;
   padding: 1.25rem 1.25rem 3rem;
 }
-.desktop {
+.box {
+  display: none;
+}
+.images {
+  position: relative;
+}
+.desktop,
+.desk-pattern {
   display: none;
 }
 .mobile {
@@ -15,6 +22,11 @@
   display: block;
   transform: translateY(-70%);
 }
+.mob-pattern {
+  position: absolute;
+  left: 1.56rem;
+  top: -2rem;
+}
 .text {
   text-align: center;
   font-size: 32px;
@@ -22,7 +34,7 @@
   color: #1e1f36;
   font-size: 32px;
   line-height: 40px;
-  margin-top: -90px;
+  margin-top: -55px;
 }
 .rotate {
   rotate: 180deg;
@@ -59,11 +71,23 @@ hr {
 .article {
   cursor: pointer;
 }
-@media (min-width: 768px) {
+
+@media (min-width: 1440px) {
   .app {
     display: flex;
     width: 920px;
-    overflow: hidden;
+    padding: 65px 0 83px;
+  }
+  .mob-pattern {
+    display: none;
+  }
+  .desk-pattern {
+    position: absolute;
+    display: block;
+    top: -90%;
+    left: -530px;
+    width: 964px;
+    height: 944px;
   }
   .mobile {
     display: none;
@@ -71,9 +95,21 @@ hr {
   .desktop {
     display: block;
     position: relative;
-    left: -50px;
+    left: -40px;
+    width: 471px;
   }
   .text {
     margin-top: 0;
+    text-align: left;
+  }
+  .article {
+    width: 350px;
+  }
+
+  .box {
+    display: block;
+    position: absolute;
+    left: -90px;
+    top: 150px;
   }
 }
